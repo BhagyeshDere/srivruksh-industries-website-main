@@ -112,13 +112,7 @@ export default function WhoWeAre() {
               </div>
 
               {/* Premium Button Interaction */}
-              <button className="relative group px-10 py-4 bg-[#0B2E5B] text-white font-bold rounded-full overflow-hidden transition-all">
-                <span className="relative z-10 flex items-center gap-3">
-                  Our Engineering Story
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#C79A3B] to-[#b0842d] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button>
+             
             </motion.div>
           </div>
           

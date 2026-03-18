@@ -9,17 +9,17 @@ export default function Products() {
 const products = [
 {
 title:"Conveyor Systems",
-image:"/products/conveyor1.jpg",
+image:"/images/products/conveyor1.jpg",
 desc:"Industrial conveyor systems designed for material handling and automation."
 },
 {
 title:"Automation Machines",
-image:"/products/automation.jpg",
+image:"/images/products/automation.jpg",
 desc:"Custom SPM and automation machines built for industrial productivity."
 },
 {
 title:"Industrial Fabrication",
-image:"/products/fabrication.jpg",
+image:"/images/products/fabrication.jpg",
 desc:"Heavy structural fabrication and precision engineering solutions."
 }
 ]

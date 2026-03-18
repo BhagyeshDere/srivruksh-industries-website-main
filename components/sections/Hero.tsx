@@ -13,7 +13,7 @@ export default function Hero() {
       transition={{ duration: 1 }}
     >
       <Image
-        src="/hero.png"
+        src="/images/assets/hero.png"
         alt="Industrial Manufacturing"
         fill
         priority

@@ -8,32 +8,32 @@ export default function Facilities() {
   const facilities = [
     {
       title: "CNC Profile Cutting Machine",
-      image: "/facilities/cnc-cutting.jpg",
+      image: "/images/facilities/cnc-cutting.jpg",
       desc: "High precision cutting from 3mm to 150mm thickness."
     },
     {
       title: "CNC Turning Machine",
-      image: "/facilities/cnc-turning.jpg",
+      image: "/images/facilities/cnc-turning.jpg",
       desc: "Powerful CNC turning for industrial accuracy."
     },
     {
       title: "Universal Milling Machine",
-      image: "/facilities/milling.jpg",
+      image: "/images/facilities/milling.jpg",
       desc: "Advanced milling for complex machining."
     },
     {
       title: "Tapping Machine",
-      image: "/facilities/tapping.jpg",
+      image: "/images/facilities/tapping.jpg",
       desc: "Precision tapping from M3 to M30."
     },
     {
       title: "VMC Machine",
-      image: "/facilities/vmc.jpg",
+      image: "/images/facilities/vmc.jpg",
       desc: "High accuracy vertical machining center."
     },
     {
       title: "Fabrication Facility",
-      image: "/facilities/fabrication.jpg",
+      image: "/images/facilities/fabrication.jpg",
       desc: "Complete welding & fabrication solutions."
     }
   ]

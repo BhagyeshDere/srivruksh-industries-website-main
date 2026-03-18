@@ -35,7 +35,7 @@ viewport={{once:true}}
       {/* Background Image */}
 
       <Image
-        src="/why.png"
+        src="/images/assets/why.png"
         alt="Industrial Manufacturing"
         fill
         priority
