@@ -94,220 +94,158 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <section className="bg-[#f8fafc] text-[#0f172a]">
-   {/* ================= HEADER (LIGHT VERSION) ================= */}
-<div className="relative py-24 md:py-32 lg:py-36 px-6 overflow-hidden bg-[#f8fafc]">
-
-  {/* Soft Background Glow */}
-  <div className="absolute inset-0 bg-gradient-to-r from-[#0B2E5B]/5 via-white to-[#0B2E5B]/5" />
-
-  {/* Gold Glow */}
-  <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[350px] h-[350px] bg-[#C79A3B]/10 blur-[120px] rounded-full" />
-
-  {/* Subtle Blue Glow */}
-  <div className="absolute bottom-0 right-10 w-[300px] h-[300px] bg-[#0B2E5B]/10 blur-[120px] rounded-full" />
-
-  {/* Grid */}
-  <div
-    className="absolute inset-0 opacity-[0.05]"
-    style={{
-      backgroundImage: `radial-gradient(#C79A3B 1px, transparent 1px)`,
-      backgroundSize: "40px 40px"
-    }}
-  />
-
-  {/* Content */}
-  <div className="max-w-7xl mx-auto relative z-10 text-center">
-
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.9 }}
-    >
-
-      {/* Tag */}
-      <div className="inline-block mb-6 px-6 py-2 rounded-full bg-white border border-gray-200 text-xs md:text-sm text-[#C79A3B] tracking-[0.35em] uppercase font-bold shadow-sm">
-        Operational Excellence
+    <main className="bg-[#f8fafc]">
+      {/* ================= HEADER ================= */}
+      <div className="relative py-24 md:py-32 lg:py-40 px-6 overflow-hidden bg-[#f8fafc]">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B2E5B]/5 via-white to-[#0B2E5B]/5" />
+        <div className="max-w-7xl mx-auto relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+          >
+            <div className="inline-block mb-6 px-6 py-2 rounded-full bg-white border border-gray-200 text-xs text-[#C79A3B] tracking-[0.35em] uppercase font-bold shadow-sm">
+              Operational Excellence
+            </div>
+            <h1 className="text-5xl md:text-8xl font-black mb-6 leading-[0.9] tracking-tighter text-[#0B2E5B]">
+              INDUSTRIAL <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C79A3B] to-[#e6c36a]">
+                SERVICES
+              </span>
+            </h1>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed">
+              Delivering high-performance engineering, fabrication, and automation
+              solutions tailored for modern industrial infrastructure.
+            </p>
+          </motion.div>
+        </div>
       </div>
 
-      {/* Heading (IMPROVED 🔥) */}
-      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-black mb-6 leading-[1.05] tracking-tight text-[#0B2E5B]">
-        Industrial{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C79A3B] to-[#e6c36a]">
-          Services
-        </span>
-      </h1>
-
-      {/* Divider */}
-      <div className="w-20 md:w-24 h-[3px] bg-[#C79A3B] mx-auto mb-6 rounded-full" />
-
-      {/* Description */}
-      <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base lg:text-lg leading-relaxed">
-        Delivering high-performance engineering, fabrication, and automation
-        solutions tailored for modern industrial infrastructure with precision,
-        reliability, and innovation.
-      </p>
-
-    </motion.div>
-
-  </div>
-
-  {/* Bottom Fade */}
-  <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-[#f8fafc] to-transparent" />
-
-</div>
-
-{/* ================= SERVICES ================= */}
-<div className="flex flex-col">
-  {services.map((service, index) => (
-    <ServiceBlock key={index} service={service} index={index} />
-  ))}
-</div>
-
-{/* ================= CTA SECTION ================= */}
-<section className="relative py-24 md:py-32 overflow-hidden bg-[#f8fafc] text-[#0B2E5B]">
-
-  {/* Background Glow (Light Version) */}
-  <div className="absolute inset-0 bg-gradient-to-r from-[#0B2E5B]/5 via-white to-[#0B2E5B]/5" />
-
-  {/* Gold Glow (Soft) */}
-  <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-[#C79A3B]/10 blur-[120px] rounded-full" />
-
-  {/* Subtle Blue Glow */}
-  <div className="absolute bottom-0 right-10 w-[300px] h-[300px] bg-[#0B2E5B]/10 blur-[120px] rounded-full" />
-
-  {/* Grid Pattern */}
-  <div
-    className="absolute inset-0 opacity-[0.04]"
-    style={{
-      backgroundImage: `radial-gradient(#C79A3B 1px, transparent 1px)`,
-      backgroundSize: "40px 40px"
-    }}
-  />
-
-  <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-    >
-
-      {/* Tag */}
-      <p className="text-[#C79A3B] uppercase tracking-[6px] text-xs font-bold mb-4">
-        Let’s Build Together
-      </p>
-
-      {/* Heading */}
-      <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-        Ready to Start Your{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C79A3B] to-[#e6c36a]">
-          Industrial Project?
-        </span>
-      </h2>
-
-      {/* Description */}
-      <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed mb-10">
-        Partner with Srivruksh Industries for high-performance engineering,
-        fabrication, and automation solutions tailored to your business needs.
-      </p>
-
-      {/* Buttons */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-
-        {/* Primary */}
-        <a
-          href="/contact"
-          className="group relative px-8 py-4 bg-[#C79A3B] text-white font-semibold rounded-lg overflow-hidden shadow-lg transition hover:scale-105 hover:bg-[#b88a2d]"
-        >
-          <span className="relative z-10">Get Free Consultation</span>
-
-          {/* Shine Effect */}
-          <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition" />
-        </a>
-
+      {/* ================= STACKED SERVICES ================= */}
+      <div className="relative pb-32">
+        {services.map((service, index) => (
+          <ServiceCard 
+            key={index} 
+            service={service} 
+            index={index} 
+            total={services.length} 
+          />
+        ))}
       </div>
 
-    </motion.div>
-
-  </div>
-
-  {/* Bottom Fade */}
-  <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-[#f8fafc] to-transparent" />
-
-</section>
-
-    </section>
+      {/* ================= CTA SECTION ================= */}
+      <section className="relative py-24 bg-white border-t border-slate-100 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-[#C79A3B] uppercase tracking-[6px] text-xs font-bold mb-4">Let’s Build Together</p>
+            <h2 className="text-4xl md:text-6xl font-black mb-8 text-[#0B2E5B] tracking-tighter">
+              READY TO START YOUR <br />
+              <span className="text-[#C79A3B] italic underline decoration-1 underline-offset-8">INDUSTRIAL PROJECT?</span>
+            </h2>
+            <a
+              href="/contact"
+              className="inline-flex items-center px-10 py-5 bg-[#0B2E5B] text-white font-bold rounded-xl shadow-2xl transition hover:scale-105 hover:bg-[#0d3b75]"
+            >
+              Get Free Consultation
+            </a>
+          </motion.div>
+        </div>
+      </section>
+    </main>
   )
 }
 
-function ServiceBlock({ service, index }: { service: any, index: number }) {
+function ServiceCard({ service, index, total }: { service: any, index: number, total: number }) {
   const containerRef = useRef(null)
   const isEven = index % 2 === 0
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "start start"]
   })
 
-  const imageScale = useTransform(scrollYProgress, [0, 0.5, 1], [1.1, 1, 1.1])
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.6, 1, 1, 0.6])
+  // Stacking Scale effect: previous cards shrink slightly as new ones arrive
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1 - (total - index) * 0.01])
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.9])
 
   return (
-    <div ref={containerRef} className="relative w-full h-[80vh] md:h-[70vh] flex items-center overflow-hidden border-b border-slate-100 bg-white">
-      
-      {/* IMAGE */}
-      <motion.div style={{ scale: imageScale, opacity }} className="absolute inset-0 z-0">
-        <Image 
-          src={service.image} 
-          alt={service.title} 
-          fill 
-          className="object-cover transition-all duration-1000 brightness-[0.8] contrast-[1.1]"
-        />
+    <div 
+      ref={containerRef} 
+      className="sticky top-12 md:top-24 w-full flex justify-center px-4 md:px-6 mb-12"
+    >
+      <motion.div 
+        style={{ scale, opacity }}
+        className="relative w-full max-w-7xl h-[85vh] md:h-[75vh] rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] border border-white/20 bg-slate-900"
+      >
+        {/* BACKGROUND IMAGE */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src={service.image} 
+            alt={service.title} 
+            fill 
+            className="object-cover opacity-60 brightness-[0.7] contrast-[1.1]"
+          />
+          {/* Gradient Mask */}
+          <div className={`absolute inset-0 ${
+            isEven 
+              ? "bg-gradient-to-r from-[#0B2E5B] via-[#0B2E5B]/60 to-transparent" 
+              : "bg-gradient-to-l from-[#0B2E5B] via-[#0B2E5B]/60 to-transparent"
+          }`} />
+        </div>
 
-        {/* ✅ FIXED OVERLAY (NO WHITE FLASH) */}
-        <div className={`absolute inset-0 ${
-          isEven
-            ? "bg-gradient-to-r from-black/60 via-black/20 to-transparent"
-            : "bg-gradient-to-l from-black/60 via-black/20 to-transparent"
-        }`} />
-      </motion.div>
-
-      {/* CONTENT (UNCHANGED) */}
-      <div className={`relative z-10 w-full max-w-7xl mx-auto px-6 flex ${isEven ? 'justify-start' : 'justify-end'}`}>
-        <motion.div 
-          initial={{ opacity: 0, x: isEven ? -50 : 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="max-w-2xl p-8 md:p-12 bg-white/80 backdrop-blur-xl border border-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] rounded-3xl"
-        >
-          <div className="flex items-start gap-6 mb-8">
-            <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center bg-[#0B2E5B] text-[#C79A3B] rounded-2xl shadow-xl">
-              {service.icon}
+        {/* CONTENT PANEL */}
+        <div className={`relative z-10 w-full h-full flex items-center p-8 md:p-20 ${isEven ? 'justify-start' : 'justify-end'}`}>
+          <motion.div 
+            initial={{ opacity: 0, x: isEven ? -50 : 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className={`max-w-2xl ${isEven ? 'text-left' : 'text-right'}`}
+          >
+            {/* ICON & MODULE ID */}
+            <div className={`flex items-center gap-4 mb-8 ${isEven ? 'flex-row' : 'flex-row-reverse'}`}>
+              <div className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 flex items-center justify-center bg-[#C79A3B] text-white rounded-3xl shadow-xl">
+                {service.icon}
+              </div>
+              <div>
+                <span className="text-[#C79A3B] font-mono text-xs font-black tracking-widest uppercase block">
+                  {service.id}
+                </span>
+                <span className="text-white/40 text-[10px] uppercase tracking-[0.3em] font-bold">Module {index + 1}</span>
+              </div>
             </div>
-            <div>
-              <span className="text-[#C79A3B] font-mono text-[10px] font-black tracking-widest uppercase">Module {index + 1}</span>
-              <h2 className="text-3xl md:text-5xl font-black text-[#0B2E5B] leading-none tracking-tighter uppercase mt-1">
-                {service.title}
-              </h2>
-            </div>
-          </div>
 
-          <div className="space-y-6">
-            <div className="h-[2px] w-20 bg-[#C79A3B]" />
-            <p className="text-slate-600 text-sm md:text-base leading-relaxed font-medium">
+            {/* TITLE */}
+            <h2 className="text-3xl md:text-6xl font-black text-white leading-[1] tracking-tighter uppercase mb-6">
+              {service.title}
+            </h2>
+
+            {/* DIVIDER */}
+            <div className={`h-[3px] w-24 bg-[#C79A3B] mb-8 rounded-full ${isEven ? '' : 'ml-auto'}`} />
+
+            {/* DESCRIPTION */}
+            <p className="text-slate-200 text-sm md:text-xl leading-relaxed font-medium mb-10 opacity-90">
               {service.desc}
             </p>
-          </div>
-        </motion.div>
-      </div>
-      
+
+            {/* BUTTON */}
+            <button className={`flex items-center gap-3 text-white text-xs md:text-sm font-black uppercase tracking-widest group ${isEven ? '' : 'flex-row-reverse ml-auto'}`}>
+              <span className="group-hover:text-[#C79A3B] transition-colors">Technical Specifications</span>
+              <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-[#C79A3B] group-hover:border-[#C79A3B] transition-all">
+                <ArrowRight size={18} className="text-white" />
+              </div>
+            </button>
+          </motion.div>
+        </div>
+
+        {/* TOP OVERLAY DECORATION */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C79A3B]/50 to-transparent opacity-30" />
+      </motion.div>
     </div>
-
-
-
-    
   )
 }
