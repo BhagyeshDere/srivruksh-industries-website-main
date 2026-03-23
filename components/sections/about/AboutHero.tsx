@@ -52,7 +52,7 @@ export default function AboutHero() {
           className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.95] mb-8 tracking-tighter"
         >
           ENGINEERING <br />
-          <span className="font-thin italic text-[#C79A3B] opacity-90 drop-shadow-[0_0_15px_rgba(199,154,59,0.4)]">
+          <span className=" text-[#C79A3B] opacity-90 ">
             Excellence
           </span>
         </motion.h1>
