@@ -1,12 +1,20 @@
 "use client"
-
+import { Suspense } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Phone, Mail, Send, Building2, MapPin, Globe, ArrowRight, Activity } from "lucide-react"
+import { Phone, Mail, MapPin, Globe, ArrowRight, Activity } from "lucide-react"
 import { useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
 
-export default function Contact() {
+export default function ContactPage() {
+  return (
+    <Suspense fallback={<div className="p-10 text-center">Loading...</div>}>
+      <Contact />
+    </Suspense>
+  )
+}
+
+function Contact() {
   const searchParams = useSearchParams()
 
   const [product, setProduct] = useState("")
