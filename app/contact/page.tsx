@@ -1,4 +1,7 @@
 "use client"
+
+export const dynamic = "force-dynamic"  // ✅ ADD THIS
+
 import { Suspense } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
