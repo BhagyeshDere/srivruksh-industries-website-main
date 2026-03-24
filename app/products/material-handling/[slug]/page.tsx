@@ -206,54 +206,9 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
-      {/* ================= PROCESS FLOW ================= */}
-      <section className="bg-[#0B2E5B] text-white py-32 px-6 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-20">
-            <h3 className="text-4xl md:text-6xl font-black mb-4 tracking-tighter uppercase leading-none">
-              Working <br /> Process
-            </h3>
-            <div className="h-2 w-24 bg-[#C79A3B]" />
-          </div>
+      
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {[
-              "Requirement Analysis",
-              "Design & Engineering",
-              "Production & Assembly",
-              "Testing & Quality Check",
-              "Delivery & Installation",
-            ].map((step, i) => (
-              <motion.div 
-                key={i} 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group relative flex flex-col"
-              >
-                <div className="flex items-center gap-6 mb-6">
-                  <div className="text-6xl font-black text-white/10 group-hover:text-[#C79A3B] transition-colors">
-                    {`0${i + 1}`}
-                  </div>
-                  <div className="h-px flex-1 bg-white/10 group-hover:bg-[#C79A3B]/50 transition-colors" />
-                </div>
-                <div className="border-l-2 border-[#C79A3B] pl-6">
-                  <p className="text-2xl font-black uppercase tracking-tight group-hover:translate-x-2 transition-transform duration-300">
-                    {step}
-                  </p>
-                  <p className="text-slate-400 text-xs mt-2 font-black tracking-widest uppercase">Phase Verified</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Decorative Branding Watermark */}
-      <div className="py-20 text-center opacity-[0.03] select-none pointer-events-none">
-        <p className="text-[12vw] font-black tracking-tighter uppercase leading-none">Industrial Excellence</p>
-      </div>
+      
     </main>
   )
 }

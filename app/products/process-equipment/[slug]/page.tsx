@@ -215,59 +215,9 @@ export default function ProcessEquipmentDetailPage() {
         </div>
       </section>
 
-      {/* ================= PROCESS FLOW (TECHNICAL STEPPER) ================= */}
-      <section className="bg-[#0B2E5B] text-white py-32 px-6 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
-            <div>
-              <h3 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.8]">
-                Operational <br /> Workflow
-              </h3>
-            </div>
-            <div className="text-[#C79A3B] text-xs font-black uppercase tracking-[0.5em] pb-2">
-              System Cycle v1.0
-            </div>
-          </div>
+      
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 relative">
-             {/* Connection Line (Desktop) */}
-             <div className="absolute top-1/2 left-0 w-full h-px bg-white/10 hidden lg:block -translate-y-[100px]" />
-
-            {[
-              "System Design & Engineering",
-              "Component Manufacturing",
-              "Assembly & Integration",
-              "Performance Testing",
-              "Deployment & Support",
-            ].map((step, i) => (
-              <motion.div 
-                key={i} 
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="relative z-10"
-              >
-                <div className="mb-8">
-                   <div className="text-[#C79A3B] font-black text-5xl mb-2">
-                    {`0${i + 1}`}
-                  </div>
-                  <div className="w-12 h-1 bg-white/20 group-hover:bg-[#C79A3B] transition-colors" />
-                </div>
-                <div className="border-l border-white/20 pl-6">
-                  <p className="text-xl font-black uppercase tracking-tight leading-tight group-hover:text-[#C79A3B] transition-colors">{step}</p>
-                  <p className="text-slate-400 text-[10px] mt-4 font-black tracking-widest uppercase">Verified System</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Decorative Branding */}
-      <div className="py-24 text-center opacity-[0.03] select-none pointer-events-none overflow-hidden">
-        <p className="text-[15vw] font-black tracking-tighter uppercase leading-none whitespace-nowrap">High-Precision Process</p>
-      </div>
+      
     </main>
   )
 }

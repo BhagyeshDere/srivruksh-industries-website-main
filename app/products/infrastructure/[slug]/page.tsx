@@ -206,58 +206,9 @@ export default function InfrastructureDetailPage() {
         </div>
       </section>
 
-      {/* ================= PROCESS FLOW (TECHNICAL TIMELINE) ================= */}
-      <section className="bg-[#0B2E5B] text-white py-32 px-6 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-20">
-             <h3 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-4">
-              Execution <br /> Process
-            </h3>
-            <div className="h-2 w-32 bg-[#C79A3B]" />
-          </div>
+     
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-x-16 lg:gap-y-24">
-            {[
-              "Project Planning & Design",
-              "Material Procurement",
-              "Fabrication & Assembly",
-              "On-site Installation",
-              "Inspection & Handover",
-            ].map((step, i) => (
-              <motion.div 
-                key={i} 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group"
-              >
-                <div className="flex items-center gap-6 mb-6">
-                   <div className="text-[#C79A3B] font-black text-6xl opacity-20 group-hover:opacity-100 transition-opacity">
-                    {`0${i + 1}`}
-                  </div>
-                  <div className="h-px flex-1 bg-white/10" />
-                </div>
-                <div className="border-l-2 border-[#C79A3B] pl-8 py-2">
-                  <p className="text-2xl font-black uppercase tracking-tight leading-tight group-hover:text-[#C79A3B] transition-colors">{step}</p>
-                  <p className="text-slate-400 text-sm mt-3 font-medium uppercase tracking-widest">Stage Analysis Complete</p>
-                </div>
-              </motion.div>
-            ))}
-            
-            {/* Final Achievement Square */}
-            <div className="border border-white/10 rounded-3xl p-10 flex flex-col justify-center items-center text-center bg-white/5 backdrop-blur-sm group hover:border-[#C79A3B]/50 transition-colors">
-                <HardHat className="text-[#C79A3B] mb-6" size={48} />
-                <p className="text-lg font-black uppercase tracking-widest">Ready for Deployment</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Decorative Branding Watermark */}
-      <div className="py-20 text-center opacity-[0.03] select-none pointer-events-none">
-        <p className="text-[12vw] font-black tracking-tighter uppercase leading-none">Engineering Excellence</p>
-      </div>
+      
     </main>
   )
 }

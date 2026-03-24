@@ -193,57 +193,8 @@ export default function FabricationDetailPage() {
         </div>
       </section>
 
-      {/* ================= PROCESS TIMELINE ================= */}
-      <section className="bg-[#0B2E5B] text-white py-32 px-6 relative">
-        <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#f8fafc] to-transparent opacity-10" />
-        
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h3 className="text-4xl md:text-6xl font-black mb-4 tracking-tight uppercase">
-              Fabrication Process
-            </h3>
-            <p className="text-[#C79A3B] font-bold tracking-widest uppercase text-xs">Standardized Workflow Efficiency</p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative">
-            {/* Connector Line for Desktop */}
-            <div className="hidden lg:block absolute top-12 left-0 w-full h-px bg-white/10" />
-            
-            {[
-              "Design & Planning",
-              "Material Cutting",
-              "Welding & Assembly",
-              "Finishing & Quality Check",
-            ].map((step, i) => (
-              <motion.div 
-                key={i} 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="relative flex flex-col items-center lg:items-start text-center lg:text-left group"
-              >
-                <div className="w-24 h-24 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-8 relative z-10 backdrop-blur-sm group-hover:border-[#C79A3B] transition-colors duration-500">
-                  <span className="text-[#C79A3B] font-black text-3xl">
-                    {`0${i + 1}`}
-                  </span>
-                </div>
-                <div>
-                  <p className="text-xl font-black tracking-tight uppercase mb-4 leading-none group-hover:text-[#C79A3B] transition-colors">
-                    {step}
-                  </p>
-                  <div className="h-1 w-8 bg-[#C79A3B]/30 mb-4 mx-auto lg:mx-0" />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Decorative Footer Spacer */}
-      <div className="py-20 bg-[#0B2E5B] text-center opacity-10 pointer-events-none select-none">
-        <p className="text-[10vw] font-black tracking-tighter uppercase leading-none">Precision</p>
-      </div>
+      
     </main>
   )
 }
