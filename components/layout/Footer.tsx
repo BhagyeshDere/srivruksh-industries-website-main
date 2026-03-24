@@ -37,10 +37,8 @@ export default function Footer() {
               heavy fabrication, and custom manufacturing solutions.
             </p>
 
-            {/* Social (Updated) */}
             <div className="flex gap-2 sm:gap-3 flex-wrap">
 
-              {/* Instagram */}
               <a
                 href="#"
                 className="bg-white/5 hover:bg-[#C79A3B] transition-all p-2 sm:p-2.5 rounded-lg sm:rounded-xl hover:scale-105 border border-white/10"
@@ -48,7 +46,6 @@ export default function Footer() {
                 <Instagram size={16} className="sm:w-[18px] sm:h-[18px]" />
               </a>
 
-              {/* IndiaMART (using Globe icon) */}
               <a
                 href="#"
                 className="bg-white/5 hover:bg-[#C79A3B] transition-all p-2 sm:p-2.5 rounded-lg sm:rounded-xl hover:scale-105 border border-white/10"
@@ -110,16 +107,22 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact (UPDATED 🔥) */}
           <div>
             <h4 className="text-[10px] sm:text-xs md:text-sm font-black mb-5 sm:mb-7 text-[#C79A3B] uppercase tracking-[0.2em] sm:tracking-[0.3em]">
               Connect
             </h4>
 
             <ul className="space-y-4 sm:space-y-5 text-sm text-gray-300 font-semibold">
-              <li className="flex items-start gap-3">
+              
+              <li className="flex items-start gap-3 leading-relaxed">
                 <span>📍</span>
-                <span>MIDC Bhosari,<br/>Pune, MH</span>
+                <span>
+                  M/S. SRIVRUKSH INDUSTRIES PVT LTD <br/>
+                  Sr. No. 117/2, Gagai Nagar Nashik Road, <br/>
+                  Wakhar Mahamandal, Bhosari Pune - 411039 <br/>
+                  (Maharashtra) India
+                </span>
               </li>
 
               <li className="flex items-center gap-2 sm:gap-3 hover:text-white transition">
@@ -130,6 +133,10 @@ export default function Footer() {
                 <Mail size={14} className="text-[#C79A3B]" /> infosrivruksh@gmail.com
               </li>
 
+              <li className="flex items-center gap-2 sm:gap-3 hover:text-white transition">
+                <Mail size={14} className="text-[#C79A3B]" /> srivruksh0052@gmail.com
+              </li>
+
               <li className="pt-3 mt-2 border-t border-white/5">
                 <span className="text-[9px] text-[#C79A3B] block font-black tracking-widest uppercase mb-1">
                   Registration
@@ -138,6 +145,7 @@ export default function Footer() {
                   GSTIN: 27ABJCS7257E1ZO
                 </span>
               </li>
+
             </ul>
           </div>
 
