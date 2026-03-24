@@ -116,40 +116,7 @@ export default function Clients() {
           </div>
         </div>
 
-        {/* STATS */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="mt-12 sm:mt-14 md:mt-16 flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-16 border-t border-slate-200 pt-10 sm:pt-12 md:pt-16"
-        >
-
-          <div className="text-center">
-            <h4 className="text-xl sm:text-2xl md:text-3xl font-black text-[#0B2E5B]">99.8%</h4>
-            <p className="text-[8px] sm:text-[9px] md:text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em] mt-1">
-              Quality Assurance
-            </p>
-          </div>
-
-          <div className="hidden md:block w-px h-10 bg-slate-200" />
-
-          <div className="text-center">
-            <h4 className="text-xl sm:text-2xl md:text-3xl font-black text-[#0B2E5B]">500+</h4>
-            <p className="text-[8px] sm:text-[9px] md:text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em] mt-1">
-              Projects Delivered
-            </p>
-          </div>
-
-          <div className="hidden md:block w-px h-10 bg-slate-200" />
-
-          <div className="text-center">
-            <h4 className="text-xl sm:text-2xl md:text-3xl font-black text-[#0B2E5B]">15+</h4>
-            <p className="text-[8px] sm:text-[9px] md:text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em] mt-1">
-              Global Clients
-            </p>
-          </div>
-
-        </motion.div>
+      
 
       </div>
     </motion.section>

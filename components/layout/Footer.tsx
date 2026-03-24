@@ -3,13 +3,10 @@
 import Image from "next/image"
 import Link from "next/link"
 import {
-  Facebook,
   Instagram,
-  Linkedin,
-  Youtube,
-  Mail,
+  Globe,
   Phone,
-  Globe
+  Mail
 } from "lucide-react"
 
 export default function Footer() {
@@ -40,17 +37,25 @@ export default function Footer() {
               heavy fabrication, and custom manufacturing solutions.
             </p>
 
-            {/* Social */}
+            {/* Social (Updated) */}
             <div className="flex gap-2 sm:gap-3 flex-wrap">
-              {[Linkedin, Facebook, Instagram, Youtube, Globe].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="bg-white/5 hover:bg-[#C79A3B] transition-all p-2 sm:p-2.5 rounded-lg sm:rounded-xl hover:scale-105 border border-white/10"
-                >
-                  <Icon size={16} className="sm:w-[18px] sm:h-[18px]" />
-                </a>
-              ))}
+
+              {/* Instagram */}
+              <a
+                href="#"
+                className="bg-white/5 hover:bg-[#C79A3B] transition-all p-2 sm:p-2.5 rounded-lg sm:rounded-xl hover:scale-105 border border-white/10"
+              >
+                <Instagram size={16} className="sm:w-[18px] sm:h-[18px]" />
+              </a>
+
+              {/* IndiaMART (using Globe icon) */}
+              <a
+                href="#"
+                className="bg-white/5 hover:bg-[#C79A3B] transition-all p-2 sm:p-2.5 rounded-lg sm:rounded-xl hover:scale-105 border border-white/10"
+              >
+                <Globe size={16} className="sm:w-[18px] sm:h-[18px]" />
+              </a>
+
             </div>
           </div>
 

@@ -41,7 +41,7 @@ export default function AboutHero() {
         >
           ENGINEERING <br />
           <span className="text-[#C79A3B] opacity-90">
-            Excellence
+            EXCELLENCE
           </span>
         </motion.h1>
 

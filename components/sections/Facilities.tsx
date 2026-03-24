@@ -122,7 +122,6 @@ export default function Facilities() {
 
             <div className="relative h-[380px] sm:h-[450px] md:h-[580px] rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#0B2E5B]/20">
 
-              {/* IMAGE */}
               <Image
                 src={item.image}
                 alt={item.title}
@@ -130,10 +129,8 @@ export default function Facilities() {
                 className="object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[0.3] group-hover:grayscale-0"
               />
 
-              {/* OVERLAY */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B2E5B] via-[#0B2E5B]/40 to-transparent opacity-90" />
 
-              {/* TOP */}
               <div className="absolute top-4 sm:top-6 md:top-8 left-4 sm:left-6 md:left-8 right-4 sm:right-6 md:right-8 flex justify-between items-center">
 
                 <div className="bg-white/10 backdrop-blur-md border border-white/20 px-3 sm:px-4 py-1 rounded-full flex items-center gap-2">
@@ -151,7 +148,6 @@ export default function Facilities() {
 
               </div>
 
-              {/* CONTENT */}
               <div className="absolute bottom-0 left-0 w-full p-5 sm:p-8 md:p-14">
                 <div className="flex flex-col gap-2">
 
@@ -179,6 +175,19 @@ export default function Facilities() {
             </div>
           </motion.div>
         ))}
+      </div>
+
+      {/* 👉 NEW SWIPE INDICATOR */}
+      <div className="flex justify-center mt-4 sm:mt-6">
+        <motion.div
+          initial={{ x: 0 }}
+          animate={{ x: [0, 20, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+          className="flex items-center gap-2 text-[#0B2E5B] text-xs sm:text-sm font-semibold opacity-70"
+        >
+          <span>Swipe</span>
+          <span className="text-[#C79A3B]">→</span>
+        </motion.div>
       </div>
 
       {/* BOTTOM */}
