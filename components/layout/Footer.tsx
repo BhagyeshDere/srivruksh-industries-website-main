@@ -119,7 +119,7 @@ export default function Footer() {
                 <span>📍</span>
                 <span>
                   M/S. SRIVRUKSH INDUSTRIES PVT LTD <br/>
-                  Sr. No. 117/2, Gagai Nagar Nashik Road, <br/>
+                  Sr. No. 117/2, Gangai Nagar Nashik Road, <br/>
                   Wakhar Mahamandal, Bhosari Pune - 411039 <br/>
                   (Maharashtra) India
                 </span>

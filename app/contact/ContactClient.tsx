@@ -182,7 +182,7 @@ export default function ContactClient() {
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                   M/S. SRIVRUKSH INDUSTRIES PVT LTD<br/>
-                  Sr. No. 117/2, Gagai Nagar Nashik Road,<br/>
+                  Sr. No. 117/2, Gangai Nagar Nashik Road,<br/>
                   Wakhar Mahamandal Bhosari Pune- 411039<br/>
                   <span className="text-white font-bold">(Maharashtra) India.</span>
                 </p>
