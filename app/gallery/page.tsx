@@ -21,10 +21,10 @@ export default function GalleryPage() {
   })
 
   return (
-    <main ref={containerRef} className="bg-[#f8fafc] min-h-screen overflow-hidden">
+    <main ref={containerRef} className="bg-[#f8fafc] min-h-screen overflow-x-hidden">
       
       {/* ================= PROGRESS ================= */}
-      <div className="fixed right-4 md:right-10 top-1/2 -translate-y-1/2 h-64 w-[2px] bg-slate-200 z-50 hidden md:block">
+      <div className="fixed right-3 sm:right-4 md:right-10 top-1/2 -translate-y-1/2 h-48 sm:h-56 md:h-64 w-[2px] bg-slate-200 z-50 hidden md:block">
         <motion.div 
           className="absolute top-0 left-0 w-full bg-[#C79A3B] origin-top"
           style={{ scaleY }}
@@ -32,59 +32,61 @@ export default function GalleryPage() {
         <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-black text-[#0B2E5B] uppercase tracking-[0.2em] rotate-90">Start</div>
         <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-[10px] font-black text-[#0B2E5B] uppercase tracking-[0.2em] rotate-90">End</div>
       </div>
-{/* ================= HERO (UNCHANGED) ================= */}
-<section className="relative min-h-[75vh] sm:min-h-[85vh] flex items-center pt-32 pb-20 px-6 overflow-hidden bg-[#0B2E5B]">
+
+{/* ================= HERO ================= */}
+<section className="relative min-h-[70vh] sm:min-h-[80vh] md:min-h-[85vh] flex items-center pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 overflow-hidden bg-[#0B2E5B]">
+
   <div
     className="absolute inset-0 opacity-10 pointer-events-none"
     style={{
       backgroundImage: `linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)`,
-      backgroundSize: "100px 100px"
+      backgroundSize: "80px 80px md:100px 100px"
     }}
   />
 
+  {/* BIG TEXT FIX */}
   <motion.div
-    style={{ y: useTransform(scrollYProgress, [0, 0.2], [0, -100]) }}
+    style={{ y: useTransform(scrollYProgress, [0, 0.2], [0, -80]) }}
     className="absolute top-0 right-0 pointer-events-none opacity-10 select-none"
   >
-    <h1 className="text-[28vw] sm:text-[24vw] md:text-[20vw] lg:text-[16vw] font-black text-white leading-none translate-x-1/4 tracking-tighter">
+    <h1 className="text-[35vw] sm:text-[28vw] md:text-[20vw] lg:text-[16vw] font-black text-white leading-none translate-x-1/3 tracking-tighter">
       PROD
     </h1>
   </motion.div>
 
   <div className="relative z-10 max-w-7xl mx-auto w-full">
     <motion.div
-      initial={{ opacity: 0, x: -50 }}
+      initial={{ opacity: 0, x: -40 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
       className="flex flex-col items-center text-center lg:items-start lg:text-left"
     >
 
-      <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
+      <div className="inline-flex items-center gap-3 px-4 sm:px-6 py-2 rounded-full bg-white/5 border border-white/10 mb-6 sm:mb-8">
         <span className="h-2 w-2 rounded-full bg-[#C79A3B] animate-pulse" />
-        <span className="text-[#C79A3B] uppercase text-xs font-black tracking-widest">
+        <span className="text-[#C79A3B] uppercase text-[10px] sm:text-xs font-black tracking-widest">
           Operational Excellence
         </span>
       </div>
 
-      {/* ✅ FIXED HEADING SPACING */}
-      <h1 className="text-[10vw] md:text-[6vw] font-black text-white mb-6 uppercase leading-[0.85] tracking-tight">
+      <h1 className="text-[12vw] sm:text-[10vw] md:text-[6vw] font-black text-white mb-5 sm:mb-6 uppercase leading-[0.9] tracking-tight">
         PRODUCTS
         <br />
-        <span className="text-[#C79A3B] block -mt-2">
+        <span className="text-[#C79A3B] block -mt-1 sm:-mt-2">
           GALLERY
         </span>
       </h1>
 
-      <p className="text-slate-300 max-w-xl text-lg">
+      <p className="text-slate-300 max-w-md sm:max-w-xl text-sm sm:text-base md:text-lg">
         Delivering high-performance engineering and fabrication solutions.
       </p>
 
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
-        className="mt-10 flex items-center gap-3 text-white/40 text-xs uppercase"
+        className="mt-8 sm:mt-10 flex items-center gap-3 text-white/40 text-[10px] sm:text-xs uppercase"
       >
-        <MousePointer2 size={16} className="text-[#C79A3B]" />
+        <MousePointer2 size={14} className="text-[#C79A3B]" />
         Scroll
       </motion.div>
 
@@ -93,8 +95,8 @@ export default function GalleryPage() {
 </section>
 
       {/* ================= GRID ================= */}
-      <section className="max-w-[1500px] mx-auto px-4 md:px-8 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <section className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
           {productGallery.map((item, index) => (
             <ProductCard key={index} item={item} index={index} />
           ))}
@@ -102,22 +104,22 @@ export default function GalleryPage() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="relative py-24 px-6 text-center">
+      <section className="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 text-center">
         <div className="max-w-5xl mx-auto">
 
-          <div className="w-16 h-16 bg-white border rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-sm">
-            <Hammer className="text-[#C79A3B]" size={30} />
+          <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white border rounded-2xl flex items-center justify-center mx-auto mb-6 sm:mb-8 shadow-sm">
+            <Hammer className="text-[#C79A3B]" size={26} />
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-black text-[#0B2E5B] mb-6 uppercase">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-[#0B2E5B] mb-4 sm:mb-6 uppercase">
             Need Custom Product?
           </h2>
 
-          <p className="text-slate-500 mb-10">
+          <p className="text-slate-500 mb-8 sm:mb-10 text-sm sm:text-base">
             We manufacture as per your requirements.
           </p>
 
-          <a href="/contact" className="inline-flex items-center gap-4 bg-[#0B2E5B] text-white px-8 py-3 rounded-full">
+          <a href="/contact" className="inline-flex items-center gap-3 sm:gap-4 bg-[#0B2E5B] text-white px-6 sm:px-8 py-3 rounded-full text-sm sm:text-base">
             Contact <ArrowUpRight size={16} />
           </a>
 
@@ -131,26 +133,25 @@ export default function GalleryPage() {
 /* ================= CARD ================= */
 function ProductCard({ item, index }: { item: any; index: number }) {
 
-  // ✅ Slightly smaller card
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.8 }}
-      className="group relative h-[420px] md:h-[500px] rounded-[2rem] overflow-hidden bg-white shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-slate-100 cursor-pointer"
+      className="group relative h-[360px] sm:h-[420px] md:h-[500px] rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden bg-white shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-slate-100 cursor-pointer"
     >
 
       {/* Top Accessory */}
-      <div className="absolute top-5 left-6 flex items-center gap-2 z-10 opacity-40 group-hover:opacity-100 transition-opacity">
+      <div className="absolute top-4 sm:top-5 left-4 sm:left-6 flex items-center gap-2 z-10 opacity-40 group-hover:opacity-100 transition-opacity">
         <div className="w-1 h-4 bg-[#C79A3B]" />
-        <span className="text-[9px] font-black text-[#0B2E5B] uppercase tracking-widest">
+        <span className="text-[8px] sm:text-[9px] font-black text-[#0B2E5B] uppercase tracking-widest">
           SI-PRD-0{index + 1}
         </span>
       </div>
 
       {/* IMAGE */}
-      <div className="absolute inset-0 p-10 md:p-12 flex items-center justify-center">
+      <div className="absolute inset-0 p-6 sm:p-10 md:p-12 flex items-center justify-center">
         <div className="relative w-full h-full">
           <Image
             src={item.image}
@@ -162,23 +163,26 @@ function ProductCard({ item, index }: { item: any; index: number }) {
       </div>
 
       {/* HOVER PANEL */}
-      <div className="absolute inset-x-0 bottom-0 p-5 md:p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.16,1,0.3,1] z-20">
-        <div className="bg-[#0B2E5B]/95 backdrop-blur-2xl border border-white/10 p-6 md:p-7 rounded-[2rem] shadow-2xl relative overflow-hidden">
+      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 md:p-6 
+        translate-y-0 md:translate-y-full md:group-hover:translate-y-0 
+        transition-transform duration-500 ease-[0.16,1,0.3,1] z-20">
+        
+        <div className="bg-[#0B2E5B]/95 backdrop-blur-2xl border border-white/10 p-4 sm:p-6 md:p-7 rounded-[1.5rem] sm:rounded-[2rem] shadow-2xl relative overflow-hidden">
 
-          <div className="absolute top-0 right-0 w-16 h-16 bg-white/5 -mr-8 -mt-8 rotate-45" />
+          <div className="absolute top-0 right-0 w-12 h-12 sm:w-16 sm:h-16 bg-white/5 -mr-6 -mt-6 rotate-45" />
 
-          <span className="text-[#C79A3B] font-black text-[10px] uppercase tracking-[0.4em] block mb-2">
+          <span className="text-[#C79A3B] font-black text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] block mb-2">
             Industrial Portfolio
           </span>
 
-          <h2 className="text-xl md:text-2xl font-black text-white leading-tight uppercase tracking-tighter mb-4">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-black text-white leading-tight uppercase tracking-tight mb-3 sm:mb-4">
             {item.title}
           </h2>
 
-          <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+          <div className="pt-3 sm:pt-4 border-t border-white/10 flex items-center justify-between">
             <div className="flex items-center gap-2 text-white/60">
-              <Layers size={14} className="text-[#C79A3B]" />
-              <span className="text-[9px] font-black uppercase tracking-widest">
+              <Layers size={12} className="text-[#C79A3B]" />
+              <span className="text-[8px] sm:text-[9px] font-black uppercase tracking-widest">
                 Certified Quality
               </span>
             </div>
@@ -188,9 +192,9 @@ function ProductCard({ item, index }: { item: any; index: number }) {
       </div>
 
       {/* BORDER */}
-      <div className="absolute inset-0 border-2 border-[#C79A3B] rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-30" />
+      <div className="absolute inset-0 border-2 border-[#C79A3B] rounded-[1.5rem] sm:rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-30" />
 
-      {/* LIGHT EFFECT */}
+      {/* LIGHT */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#0B2E5B]/5 to-transparent group-hover:opacity-0 transition-opacity" />
 
     </motion.div>

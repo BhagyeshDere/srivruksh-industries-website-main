@@ -94,65 +94,39 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <main className="bg-[#f8fafc]">
+    <main className="bg-[#f8fafc] overflow-x-hidden">
       {/* ================= HEADER ================= */}
-      <div className="relative py-24 md:py-32 lg:py-40 px-6 overflow-hidden bg-[#f8fafc]">
-        {/* Animated Gradient Base - Reduced Blue Opacity */}
+      <div className="relative py-20 md:py-32 lg:py-40 px-4 sm:px-6 overflow-hidden bg-[#f8fafc]">
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B2E5B]/2 via-white to-[#0B2E5B]/2" />
-
-        {/* Moving Gradient Mesh - Reduced Opacity */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(199,154,59,0.1),transparent_40%),radial-gradient(circle_at_80%_70%,rgba(11,46,91,0.05),transparent_50%)]" />
 
-        {/* Floating Glow Blobs */}
         <motion.div
-          className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#C79A3B]/10 rounded-full blur-[120px]"
+          className="absolute -top-20 -left-20 md:-top-40 md:-left-40 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-[#C79A3B]/10 rounded-full blur-[80px] md:blur-[120px]"
           animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
           transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
         />
 
-        <motion.div
-          className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-[#0B2E5B]/10 rounded-full blur-[120px]"
-          animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.3, 0.1] }}
-          transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
-        />
-
-        {/* Subtle Engineering Grid */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(90deg,#0B2E5B_1px,transparent_1px),linear-gradient(180deg,#0B2E5B_1px,transparent_1px)] bg-[size:50px_50px]" />
-
-        {/* Soft Light Sweep Animation */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-          animate={{ x: ["-100%", "100%"] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "linear" }}
-        />
+        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(90deg,#0B2E5B_1px,transparent_1px),linear-gradient(180deg,#0B2E5B_1px,transparent_1px)] bg-[size:30px_30px] md:bg-[size:50px_50px]" />
 
         <div className="max-w-7xl mx-auto relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9 }}
-          >
-            <div className="inline-block mb-6 px-6 py-2 rounded-full bg-white border border-gray-200 text-xs text-[#C79A3B] tracking-[0.35em] uppercase font-bold shadow-sm">
+          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}>
+            <div className="inline-block mb-4 md:mb-6 px-4 md:px-6 py-1.5 md:py-2 rounded-full bg-white border border-gray-200 text-[10px] md:text-xs text-[#C79A3B] tracking-[0.2em] md:tracking-[0.35em] uppercase font-bold shadow-sm">
               Operational Excellence
             </div>
-
-            <h1 className="text-5xl md:text-8xl font-black mb-6 leading-[0.9] tracking-tighter text-[#0B2E5B]">
-              INDUSTRIAL <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C79A3B] to-[#e6c36a]">
-                SERVICES
-              </span>
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-black mb-4 md:mb-6 leading-[1] md:leading-[0.9] tracking-tighter text-[#0B2E5B]">
+              INDUSTRIAL <br className="hidden sm:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C79A3B] to-[#e6c36a]">SERVICES</span>
             </h1>
-
-            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed font-medium">
-              Delivering high-performance engineering, fabrication, and automation
-              solutions tailored for modern industrial infrastructure.
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed font-medium px-4">
+              Delivering high-performance engineering, fabrication, and automation solutions tailored for modern industrial infrastructure.
             </p>
           </motion.div>
         </div>
       </div>
 
       {/* ================= STACKED SERVICES ================= */}
-      <div className="relative pb-32">
+      {/* Container spacing removed to allow cards to overlap immediately */}
+      <div className="relative pb-24 md:pb-40">
         {services.map((service, index) => (
           <ServiceCard 
             key={index} 
@@ -164,23 +138,15 @@ export default function ServicesPage() {
       </div>
 
       {/* ================= CTA SECTION ================= */}
-      <section className="relative py-24 bg-white border-t border-slate-100 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-[#C79A3B] uppercase tracking-[6px] text-xs font-bold mb-4">Let’s Build Together</p>
-            <h2 className="text-4xl md:text-6xl font-black mb-8 text-[#0B2E5B] tracking-tighter">
+      <section className="relative py-16 md:py-24 bg-white border-t border-slate-100 overflow-hidden px-6">
+        <div className="max-w-7xl mx-auto relative z-10 text-center">
+          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
+            <p className="text-[#C79A3B] uppercase tracking-[3px] md:tracking-[6px] text-[10px] md:text-xs font-bold mb-4">Let’s Build Together</p>
+            <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-[#0B2E5B] tracking-tighter">
               READY TO START YOUR <br />
-              <span className="text-[#C79A3B] italic underline decoration-1 underline-offset-8">INDUSTRIAL PROJECT?</span>
+              <span className="text-[#C79A3B] italic underline decoration-1 underline-offset-4 md:underline-offset-8">INDUSTRIAL PROJECT?</span>
             </h2>
-            <a
-              href="/contact"
-              className="inline-flex items-center px-10 py-5 bg-[#0B2E5B] text-white font-bold rounded-xl shadow-2xl transition hover:scale-105 hover:bg-[#0d3b75]"
-            >
+            <a href="/contact" className="inline-flex items-center px-8 md:px-10 py-4 md:py-5 bg-[#0B2E5B] text-white text-sm md:text-base font-bold rounded-xl shadow-2xl transition hover:scale-105 hover:bg-[#0d3b75]">
               Get Free Consultation
             </a>
           </motion.div>
@@ -196,68 +162,68 @@ function ServiceCard({ service, index, total }: { service: any, index: number, t
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "start start"]
+    offset: ["start end", "end start"]
   })
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1 - (total - index) * 0.012])
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.95])
+  // Smooth transformations for overlapping effect
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 1 - (total - index) * 0.015])
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 0.9], [1, 1, 0])
+  const y = useTransform(scrollYProgress, [0, 1], [0, -30])
 
   return (
     <div 
       ref={containerRef} 
-      className="sticky top-10 md:top-20 w-full flex justify-center px-2 md:px-8 lg:px-12 mb-16 lg:mb-24"
+      // mb-0 removes extra spacing between sticky cards
+      className="sticky top-20 md:top-24 w-full flex justify-center px-4 md:px-8 lg:px-12 mb-0 h-[70vh] md:h-[80vh]"
     >
       <motion.div 
-        style={{ scale, opacity }}
-        className="group relative w-full max-w-8xl h-[90vh] md:h-[80vh] rounded-[2.5rem] md:rounded-[5rem] overflow-hidden shadow-[0_60px_120px_-30px_rgba(0,0,0,0.4)] border border-white/20 bg-slate-900"
+        style={{ scale, opacity, y }}
+        className="group relative w-full max-w-[1300px] h-full rounded-[2rem] md:rounded-[3.5rem] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-white/10 bg-slate-900"
       >
         {/* IMAGE LAYER */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <Image 
             src={service.image} 
             alt={service.title} 
             fill 
-            priority={index < 2}
-            className="object-cover opacity-60 brightness-[0.75] contrast-[1.05] transition-transform duration-[3s] ease-out group-hover:scale-110"
+            priority={index < 3}
+            className="object-cover opacity-50 brightness-[0.7] contrast-[1.1] transition-transform duration-[3s] ease-out group-hover:scale-110"
           />
-          <div className={`absolute inset-0 z-10 ${
+          <div className={`absolute inset-0 z-10 bg-[#0B2E5B]/60 md:bg-transparent ${
             isEven 
-              ? "bg-gradient-to-r from-[#0B2E5B]/80 via-[#0B2E5B]/60 to-transparent md:to-[#0B2E5B]/5" 
-              : "bg-gradient-to-l from-[#0B2E5B]/80 via-[#0B2E5B]/60 to-transparent md:to-[#0B2E5B]/5"
+              ? "md:bg-gradient-to-r md:from-[#0B2E5B]/90 md:via-[#0B2E5B]/60 md:to-transparent" 
+              : "md:bg-gradient-to-l md:from-[#0B2E5B]/90 md:via-[#0B2E5B]/60 md:to-transparent"
           }`} />
-          
           <div className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay z-10" 
                style={{ backgroundImage: `url("https://www.transparenttextures.com/patterns/carbon-fibre.png")` }} />
         </div>
 
         {/* CONTENT PANEL */}
-        <div className={`relative z-20 w-full h-full flex items-center p-8 md:p-20 lg:p-24 ${isEven ? 'justify-start' : 'justify-end'}`}>
+        <div className={`relative z-20 w-full h-full flex items-center p-6 sm:p-10 md:p-16 lg:p-20 ${isEven ? 'md:justify-start' : 'md:justify-end'} justify-center text-center md:text-left`}>
           <motion.div 
-            initial={{ opacity: 0, x: isEven ? -50 : 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className={`max-w-2xl ${isEven ? 'text-left' : 'text-right'}`}
+            className={`max-w-2xl flex flex-col items-center ${isEven ? 'md:items-start md:text-left' : 'md:items-end md:text-right'}`}
           >
-            <div className={`flex items-center gap-4 mb-8 ${isEven ? 'flex-row' : 'flex-row-reverse'}`}>
-              <div className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 flex items-center justify-center bg-[#C79A3B] text-white rounded-3xl shadow-xl transform group-hover:rotate-12 transition-transform duration-500">
+            <div className={`flex items-center gap-3 md:gap-4 mb-3 md:mb-6 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col`}>
+              <div className="w-10 h-10 md:w-16 md:h-16 flex-shrink-0 flex items-center justify-center bg-[#C79A3B] text-white rounded-xl md:rounded-2xl shadow-xl transform group-hover:rotate-6 transition-transform">
                 {service.icon}
               </div>
-              <div>
-                <span className="text-[#C79A3B] font-mono text-xs font-black tracking-widest uppercase block">
-                  {service.id}
-                </span>
-                <span className="text-white/40 text-[10px] uppercase tracking-[0.3em] font-bold">Module {index + 1}</span>
+              <div className="flex flex-col items-center md:items-inherit">
+                <span className="text-[#C79A3B] font-mono text-[9px] md:text-[11px] font-black tracking-widest uppercase">{service.id}</span>
+                <span className="text-white/40 text-[8px] md:text-[9px] uppercase tracking-[0.2em] font-bold">Module {index + 1}</span>
               </div>
             </div>
 
-            <h2 className="text-3xl md:text-6xl font-black text-white leading-[1] tracking-tighter uppercase mb-6">
+            <h2 className="text-xl sm:text-3xl md:text-5xl font-black text-white leading-tight md:leading-[1] tracking-tighter uppercase mb-3 md:mb-5">
               {service.title}
             </h2>
 
-            <div className={`h-[4px] w-24 bg-[#C79A3B] mb-8 rounded-full shadow-[0_0_15px_rgba(199,154,59,0.5)] ${isEven ? '' : 'ml-auto'}`} />
+            <div className="h-[2px] md:h-[3px] w-12 md:w-20 bg-[#C79A3B] mb-4 md:mb-6 rounded-full shadow-[0_0_15px_rgba(199,154,59,0.5)]" />
 
-            <p className="text-slate-100 text-sm md:text-xl leading-relaxed font-medium mb-10 opacity-95 drop-shadow-md">
+            <p className="text-slate-100 text-xs sm:text-sm md:text-lg leading-relaxed font-medium mb-5 md:mb-8 opacity-95 line-clamp-4 md:line-clamp-none">
               {service.desc}
             </p>
           </motion.div>
