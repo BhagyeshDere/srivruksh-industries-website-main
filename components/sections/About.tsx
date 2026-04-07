@@ -91,7 +91,7 @@ export default function About() {
               className="absolute right-0 top-0 w-[95%] h-[85%] rounded-xl md:rounded-2xl overflow-hidden shadow-xl"
             >
               <Image
-                src="/images/factory/automation.png"
+                src="/images/factory/abouthome.jpg"
                 alt="Industrial Site"
                 fill
                 className="object-cover"
@@ -104,7 +104,7 @@ export default function About() {
               className="absolute left-0 bottom-2 sm:bottom-4 w-[45%] h-[40%] rounded-lg md:rounded-xl overflow-hidden border-[4px] md:border-[6px] border-white shadow-xl hidden md:block"
             >
               <Image
-                src="/images/assets/why.png"
+                src="/images/assets/why.jpg"
                 alt="Machine Detail"
                 fill
                 className="object-cover"

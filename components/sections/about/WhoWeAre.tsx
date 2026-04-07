@@ -41,7 +41,7 @@ export default function WhoWeAre() {
               className="relative aspect-[4/5] sm:aspect-[4/5] md:aspect-square w-full rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-2xl z-10"
             >
               <Image
-                src="/images/factory/automation.png"
+                src="/images/factory/about.jpg"
                 alt="Srivruksh Industries Factory"
                 fill
                 className="object-cover scale-110"

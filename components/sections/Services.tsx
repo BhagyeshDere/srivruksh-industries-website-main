@@ -12,7 +12,7 @@ export default function Services() {
   return (
     <motion.section
       ref={containerRef}
-      className="bg-gradient-to-b from-gray-100 to-white py-16 sm:py-20 md:py-28 lg:py-32"
+      className="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20 md:py-28 lg:py-32"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -32,7 +32,7 @@ export default function Services() {
             Our Expertise
           </p>
 
-          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0B2E5B] mb-4 sm:mb-6 tracking-tight leading-[1.1]">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-4 sm:mb-6 tracking-tight leading-[1.1]">
             Engineering & <br className="hidden md:block" /> Manufacturing Solutions
           </h2>
 
@@ -105,21 +105,22 @@ function ServiceCard({ service, index, total }: { service: any, index: number, t
 
         {/* CARD */}
         <div className="relative h-[300px] sm:h-[380px] md:h-[500px] lg:h-[550px] w-full px-3 sm:px-4 md:px-8 lg:px-12">
-          <div className="relative w-full h-full overflow-hidden rounded-[1.8rem] sm:rounded-[2.5rem] md:rounded-[3rem] lg:rounded-[4rem] shadow-2xl bg-[#0B2E5B] border border-white/10">
+          {/* Switched background from #0B2E5B to slate-900 for a lighter dark feel */}
+          <div className="relative w-full h-full overflow-hidden rounded-[1.8rem] sm:rounded-[2.5rem] md:rounded-[3rem] lg:rounded-[4rem] shadow-2xl bg-slate-900 border border-white/5">
 
             <Image
               src={service.image}
               alt={service.title}
               fill
               priority={index < 2}
-              className="object-cover opacity-60 group-hover:scale-105 transition duration-[2s] ease-out"
+              className="object-cover opacity-75 group-hover:scale-105 transition duration-[2s] ease-out"
             />
 
-            {/* GRADIENT */}
+            {/* GRADIENT - Reduced opacity and updated color to match slate-900 */}
             <div className={`absolute inset-0 ${
               isLeft
-                ? "bg-gradient-to-r from-[#0B2E5B] via-[#0B2E5B]/60 to-transparent"
-                : "bg-gradient-to-l from-[#0B2E5B] via-[#0B2E5B]/60 to-transparent"
+                ? "bg-gradient-to-r from-slate-950/90 via-slate-900/40 to-transparent"
+                : "bg-gradient-to-l from-slate-950/90 via-slate-900/40 to-transparent"
             }`} />
 
             {/* CONTENT */}
@@ -151,7 +152,7 @@ function ServiceCard({ service, index, total }: { service: any, index: number, t
                   <div className={`w-12 sm:w-14 md:w-16 h-1 bg-[#C79A3B] mb-4 sm:mb-6 ${isLeft ? "" : "ml-auto"}`} />
 
                   {/* DESC */}
-                  <p className="text-gray-100 mb-6 sm:mb-8 leading-relaxed text-xs sm:text-sm md:text-lg lg:text-xl font-light opacity-90 max-w-xs sm:max-w-md md:max-w-lg inline-block">
+                  <p className="text-white mb-6 sm:mb-8 leading-relaxed text-xs sm:text-sm md:text-lg lg:text-xl font-light opacity-95 max-w-xs sm:max-w-md md:max-w-lg inline-block">
                     Precision-driven engineering solutions utilizing state-of-the-art
                     manufacturing workflows and expert craftsmanship.
                   </p>

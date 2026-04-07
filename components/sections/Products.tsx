@@ -9,17 +9,17 @@ export default function Products() {
   const products = [
     {
       title: "Conveyor Systems",
-      image: "/images/products/conveyor1.jpg",
+      image: "/images/products/conveyor2.jpg",
       desc: "Industrial conveyor systems designed for material handling and automation."
     },
     {
       title: "Automation Machines",
-      image: "/images/products/automation.jpg",
+      image: "/images/products/automation2.jpg",
       desc: "Custom SPM and automation machines built for industrial productivity."
     },
     {
       title: "Industrial Fabrication",
-      image: "/images/products/fabrication.jpg",
+      image: "/images/products/fabrication1.jpg",
       desc: "Heavy structural fabrication and precision engineering solutions."
     }
   ]
@@ -104,12 +104,8 @@ export default function Products() {
                 {products[0].desc}
               </p>
 
-              <Link
-                href="/products"
-                className="inline-flex items-center gap-3 sm:gap-4 bg-[#C79A3B] text-[#0B2E5B] px-5 sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl md:rounded-2xl font-black text-[10px] sm:text-xs uppercase tracking-widest hover:bg-white transition-all shadow-xl"
-              >
-                View Details <ArrowUpRight size={16} />
-              </Link>
+             
+               
             </div>
           </motion.div>
 
@@ -136,13 +132,7 @@ export default function Products() {
                     {product.title}
                   </h3>
 
-                  <Link
-                    href="/products"
-                    className="flex items-center gap-2 text-[#C79A3B] font-black text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.3em] group/link"
-                  >
-                    Explore Machine
-                    <MoveRight size={14} className="group-hover/link:translate-x-2 transition-transform" />
-                  </Link>
+                 
                 </div>
 
                 <div className="absolute inset-4 border border-white/0 group-hover:border-white/20 rounded-[1.5rem] transition-all duration-500 pointer-events-none" />
@@ -158,16 +148,7 @@ export default function Products() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <Link
-            href="/products"
-            className="group relative flex items-center gap-4 sm:gap-6 text-[#0B2E5B] font-black text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.4em]"
-          >
-            <span>View All Engineering Products</span>
-
-            <div className="flex items-center justify-center w-10 sm:w-12 h-10 sm:h-12 rounded-full border border-slate-200 group-hover:bg-[#0B2E5B] group-hover:text-white transition-all">
-              <MoveRight size={18} />
-            </div>
-          </Link>
+       
         </motion.div>
 
       </div>
