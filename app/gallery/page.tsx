@@ -13,7 +13,7 @@ export default function GalleryPage() {
   const [geometries, setGeometries] = useState<any[]>([])
 
   useEffect(() => {
-    // Generate random values only on the client side
+    // Generate random values only on the client side to avoid Vercel build/hydration errors
     const items = [...Array(6)].map((_, i) => ({
       width: Math.random() * 200 + 100,
       height: Math.random() * 200 + 100,
@@ -78,12 +78,11 @@ export default function GalleryPage() {
           />
         </svg>
 
-        {/* Layer 3: Floating Geometry Particles (Fixed Hydration) */}
+        {/* Layer 3: Floating Geometry Particles (Fixed Hydration & Multiple Style Error) */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {geometries.map((geo, i) => (
             <motion.div
               key={i}
-              style={{ y: bgY }}
               animate={{ 
                 rotate: [0, 360],
                 x: geo.moveX,
@@ -92,6 +91,7 @@ export default function GalleryPage() {
               transition={{ duration: geo.duration, repeat: Infinity, ease: "linear" }}
               className="absolute border border-white/5 bg-white/[0.02] backdrop-blur-3xl"
               style={{
+                y: bgY, // Merged scroll transform here
                 width: geo.width,
                 height: geo.height,
                 left: geo.left,
@@ -212,8 +212,10 @@ function ProductCard({ item, index }: { item: any; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative h-[400px] sm:h-[450px] md:h-[520px] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100 cursor-pointer"
+      // CHANGED: Use h-auto and flex-col on mobile so elements stack; fixed height on desktop
+      className="group relative flex flex-col h-auto min-h-[480px] md:h-[520px] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100 cursor-pointer"
     >
+      {/* Product ID Label */}
       <div className="absolute top-6 left-8 flex items-center gap-3 z-10 opacity-40 group-hover:opacity-100 transition-opacity">
         <div className="w-1.5 h-6 bg-[#C79A3B] rounded-full" />
         <span className="text-[10px] font-black text-[#0B2E5B] uppercase tracking-widest">
@@ -221,27 +223,34 @@ function ProductCard({ item, index }: { item: any; index: number }) {
         </span>
       </div>
 
-      <div className="absolute inset-0 p-10 md:p-14 flex items-center justify-center">
-        <div className="relative w-full h-full">
+      {/* Image Container */}
+      {/* CHANGED: flexible height on mobile (flex-grow) ensures it doesn't get squashed */}
+      <div className="relative flex-grow p-10 md:p-14 flex items-center justify-center">
+        <div className="relative w-full h-48 sm:h-64 md:h-full">
           <Image
             src={item.image}
             alt={item.title}
             fill
-            className="object-contain transition-all duration-700 ease-[0.16,1,0.3,1] group-hover:scale-110 group-hover:-translate-y-12"
+            className="object-contain transition-all duration-700 ease-[0.16,1,0.3,1] group-hover:scale-110 md:group-hover:-translate-y-12"
           />
         </div>
       </div>
 
-      <div className="absolute inset-x-0 bottom-0 p-5 md:p-8 translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500 ease-[0.16,1,0.3,1] z-20">
-        <div className="bg-[#0B2E5B] backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-[2rem] shadow-2xl relative overflow-hidden">
+      {/* Info Card */}
+      {/* CHANGED: 'relative' on mobile so it sits below image; 'absolute' on desktop for the hover effect */}
+      <div className="relative md:absolute inset-x-0 bottom-0 p-4 md:p-8 translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500 ease-[0.16,1,0.3,1] z-20">
+        <div className="bg-[#0B2E5B] backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-[1.8rem] md:rounded-[2rem] shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-20 h-20 bg-white/5 -mr-10 -mt-10 rotate-45" />
-          <span className="text-[#C79A3B] font-black text-[10px] uppercase tracking-[0.4em] block mb-3">
+          
+          <span className="text-[#C79A3B] font-black text-[9px] md:text-[10px] uppercase tracking-[0.4em] block mb-2 md:mb-3">
             Industrial Portfolio
           </span>
-          <h2 className="text-xl md:text-2xl font-black text-white leading-tight uppercase tracking-tight mb-4">
+          
+          <h2 className="text-lg md:text-2xl font-black text-white leading-tight uppercase tracking-tight mb-4">
             {item.title}
           </h2>
-          <div className="pt-5 border-t border-white/10 flex items-center justify-between">
+          
+          <div className="pt-4 md:pt-5 border-t border-white/10 flex items-center justify-between">
             <div className="flex items-center gap-3 text-white/60">
               <Layers size={14} className="text-[#C79A3B]" />
               <span className="text-[9px] font-black uppercase tracking-widest">
@@ -255,6 +264,7 @@ function ProductCard({ item, index }: { item: any; index: number }) {
         </div>
       </div>
 
+      {/* Visual Accents (Border & Gradient) */}
       <div className="absolute inset-0 border-4 border-[#C79A3B] rounded-[2rem] md:rounded-[2.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-30" />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-100/50 to-transparent group-hover:opacity-0 transition-opacity" />
     </motion.div>
