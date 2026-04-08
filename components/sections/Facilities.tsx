@@ -11,7 +11,7 @@ export default function Facilities() {
   const facilities = [
     {
       title: "CNC Profile Cutting Machine",
-      image: "/images/facilities/cnc-cutting.jpg",
+      image: "/images/facilities/cnc-cutting1.jpg",
       desc: "Bed Size 3000mm x 6000mm. Precision cutting for thickness from 3mm to 150mm."
     },
     {
@@ -21,17 +21,17 @@ export default function Facilities() {
     },
     {
       title: "Conventional Turning Lath (L)",
-      image: "/images/facilities/lath-large.jpg",
+      image: "/images/facilities/lath-large1.jpg",
       desc: "Large scale turning for Flange Dia up to 1200mm and lengths up to 3000mm."
     },
     {
       title: "Conventional Turning Lath (S)",
-      image: "/images/facilities/lath-small.jpg",
+      image: "/images/facilities/lath-small1.jpg",
       desc: "Standard turning for Flange Dia up to 1000mm and shaft diameters up to 500mm."
     },
     {
       title: "Tapping Machine",
-      image: "/images/facilities/tapping.jpg",
+      image: "/images/facilities/tapping1.jpg",
       desc: "High-speed industrial tapping range spanning from M3 to M30 requirements."
     },
     {
@@ -51,7 +51,7 @@ export default function Facilities() {
     },
     {
       title: "Fabrication Facility",
-      image: "/images/facilities/fabrication.jpg",
+      image: "/images/facilities/fabrication1.jpg",
       desc: "Comprehensive solutions including CO2, Argon, Arc, and specialized Aluminium welding."
     }
   ]

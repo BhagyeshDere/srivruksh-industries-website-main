@@ -59,7 +59,7 @@ export default function Footer() {
                 { name: "Home", link: "/" },
                 { name: "About Us", link: "/about" },
                 { name: "Services", link: "/services" },
-                { name: "Products", link: "/products" },
+                
                 { name: "Gallery", link: "/gallery" },
                 { name: "Contact", link: "/contact" }
               ].map((item, i) => (

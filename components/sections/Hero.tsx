@@ -116,10 +116,10 @@ export default function Hero() {
             transition={{ delay: 1, duration: 0.6 }}
           >
             <Link
-              href="/products"
+              href="/services"
               className="group bg-[#C79A3B] hover:bg-white text-[#0B2E5B] px-8 md:px-10 py-3 md:py-4 rounded-sm font-black text-[10px] md:text-xs tracking-widest shadow-xl flex items-center gap-2 transition-all duration-300"
             >
-              VIEW PRODUCTS
+              VIEW SERVICES
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
 
