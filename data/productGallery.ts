@@ -1,18 +1,10 @@
 export const productGallery = [
   {
-<<<<<<< HEAD
     title: "MS Storage Tank (Horizontal)",
     image: "/images/products/tank-truck.png"
   },
   {
     title: "SS Storage Tank (Vertical)",
-=======
-    title: "Industrial Storage Tank (Horizontal)",
-    image: "/images/products/tank-truck.png"
-  },
-  {
-    title: "Vertical Storage Tank (MS/SS)",
->>>>>>> 1f2e97152050e7589b05386aaebed61d5c66c0b2
     image: "/images/products/vertical-tank.png"
   },
   {
@@ -20,7 +12,6 @@ export const productGallery = [
     image: "/images/products/mixer.png"
   },
   {
-<<<<<<< HEAD
     title: "Rotary Drum / Industrial Drum",
     image: "/images/products/drum.png"
   },
@@ -31,24 +22,10 @@ export const productGallery = [
     image: "/images/products/roller-conveyor.png"
   },
 
-=======
-    title: "Screw Conveyor (Auger Conveyor)",
-    image: "/images/products/screw-conveyor.png"
-  },
-  {
-    title: "Rotary Drum / Industrial Drum",
-    image: "/images/products/drum.png"
-  },
-  {
-    title: "Roller Conveyor System",
-    image: "/images/products/roller-conveyor.png"
-  },
->>>>>>> 1f2e97152050e7589b05386aaebed61d5c66c0b2
   {
     title: "Inclined Belt Conveyor",
     image: "/images/products/inclined-conveyor.png"
   },
-<<<<<<< HEAD
 
   // ✅ UPDATED NAME
   {
@@ -56,33 +33,20 @@ export const productGallery = [
     image: "/images/products/bin.png"
   },
 
-=======
-  {
-    title: "Industrial Scrap Bin / Hopper",
-    image: "/images/products/bin.png"
-  },
->>>>>>> 1f2e97152050e7589b05386aaebed61d5c66c0b2
   {
     title: "Mobile Roller Conveyor Table",
     image: "/images/products/mobile-conveyor.png"
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> 1f2e97152050e7589b05386aaebed61d5c66c0b2
   {
     title: "Chain Conveyor / Slat Conveyor",
     image: "/images/products/chain-conveyor.png"
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> 1f2e97152050e7589b05386aaebed61d5c66c0b2
   {
     title: "High-Speed Industrial Mixer",
     image: "/images/products/high-speed-mixer.png"
   },
-<<<<<<< HEAD
 
   // ✅ UPDATED NAME
   {
@@ -127,14 +91,5 @@ export const productGallery = [
   {
     title: "SS Tank",
     image: "/images/products/ss-tank.png"
-=======
-  {
-    title: "MS Canal Sluice Gate",
-    image: "/images/products/canal-gate.png"
-  },
-  {
-    title: "Radial Gate / Segment Gate",
-    image: "/images/products/radial-gate.png"
->>>>>>> 1f2e97152050e7589b05386aaebed61d5c66c0b2
   }
 ]
