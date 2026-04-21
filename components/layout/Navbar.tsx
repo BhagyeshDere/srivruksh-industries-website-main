@@ -40,9 +40,6 @@ export default function Navbar() {
     { name: "Storage Systems", link: "/products/storage-systems" },
     { name: "Industrial Equipment", link: "/products/industrial-equipment" },
     { name: "Structural Systems", link: "/products/structural-systems" },
-    { name: "Process Equipment", link: "/products/process-equipment" },
-    { name: "Fabrication", link: "/products/fabrication" },
-    { name: "Infrastructure", link: "/products/infrastructure" }
   ]
 
   return (
