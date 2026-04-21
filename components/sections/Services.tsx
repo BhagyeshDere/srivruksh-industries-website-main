@@ -2,11 +2,10 @@
 
 import Image from "next/image"
 import Link from "next/link"
-<<<<<<< HEAD
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 
-// Updated services data integrated directly to ensure correct mapping
+// Cleaned and integrated services data
 export const services = [
   {
     title: "Sheet Metal Fabrication",
@@ -26,12 +25,6 @@ export const services = [
   }
 ]
 
-=======
-import { services } from "@/data/services"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef } from "react"
-
->>>>>>> 1f2e97152050e7589b05386aaebed61d5c66c0b2
 export default function Services() {
   const containerRef = useRef(null)
 
@@ -44,7 +37,6 @@ export default function Services() {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
-
       {/* HEADING */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-12 sm:mb-16 md:mb-24 lg:mb-32">
         <motion.div
@@ -128,13 +120,9 @@ function ServiceCard({ service, index, total }: { service: any, index: number, t
         viewport={{ once: true }}
         className="relative w-full group"
       >
-
-        {/* CARD */}
+        {/* CARD CONTAINER */}
         <div className="relative h-[300px] sm:h-[380px] md:h-[500px] lg:h-[550px] w-full px-3 sm:px-4 md:px-8 lg:px-12">
-<<<<<<< HEAD
-=======
           {/* Switched background from #0B2E5B to slate-900 for a lighter dark feel */}
->>>>>>> 1f2e97152050e7589b05386aaebed61d5c66c0b2
           <div className="relative w-full h-full overflow-hidden rounded-[1.8rem] sm:rounded-[2.5rem] md:rounded-[3rem] lg:rounded-[4rem] shadow-2xl bg-slate-900 border border-white/5">
 
             <Image
@@ -145,11 +133,7 @@ function ServiceCard({ service, index, total }: { service: any, index: number, t
               className="object-cover opacity-75 group-hover:scale-105 transition duration-[2s] ease-out"
             />
 
-<<<<<<< HEAD
-            {/* GRADIENT Overlay */}
-=======
-            {/* GRADIENT - Reduced opacity and updated color to match slate-900 */}
->>>>>>> 1f2e97152050e7589b05386aaebed61d5c66c0b2
+            {/* GRADIENT - Color matched to slate-900 */}
             <div className={`absolute inset-0 ${
               isLeft
                 ? "bg-gradient-to-r from-slate-950/90 via-slate-900/40 to-transparent"
@@ -159,7 +143,6 @@ function ServiceCard({ service, index, total }: { service: any, index: number, t
             {/* CONTENT */}
             <div className={`absolute inset-0 flex items-center ${isLeft ? "justify-start" : "justify-end"}`}>
               <div className="max-w-7xl w-full px-4 sm:px-6 md:px-12 lg:px-20">
-
                 <motion.div
                   initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -167,7 +150,6 @@ function ServiceCard({ service, index, total }: { service: any, index: number, t
                   viewport={{ once: true }}
                   className={`max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl text-white ${isLeft ? "" : "ml-auto text-right"}`}
                 >
-
                   {/* INDEX */}
                   <div className={`flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4 ${isLeft ? "" : "justify-end"}`}>
                     <span className="text-[#C79A3B] font-mono text-sm sm:text-base md:text-lg font-bold tracking-widest">
@@ -181,20 +163,17 @@ function ServiceCard({ service, index, total }: { service: any, index: number, t
                     {service.title}
                   </h3>
 
-                  {/* LINE */}
+                  {/* DECORATIVE LINE */}
                   <div className={`w-12 sm:w-14 md:w-16 h-1 bg-[#C79A3B] mb-4 sm:mb-6 ${isLeft ? "" : "ml-auto"}`} />
 
-                  {/* DESC */}
+                  {/* DESCRIPTION */}
                   <p className="text-white mb-6 sm:mb-8 leading-relaxed text-xs sm:text-sm md:text-lg lg:text-xl font-light opacity-95 max-w-xs sm:max-w-md md:max-w-lg inline-block">
                     Precision-driven engineering solutions utilizing state-of-the-art
                     manufacturing workflows and expert craftsmanship.
                   </p>
-
                 </motion.div>
-
               </div>
             </div>
-
           </div>
         </div>
       </motion.div>

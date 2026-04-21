@@ -37,15 +37,12 @@ export default function Navbar() {
 
   const productCategories = [
     { name: "Material Handling", link: "/products/material-handling" },
-<<<<<<< HEAD
     { name: "Storage Systems", link: "/products/storage-systems" },
     { name: "Industrial Equipment", link: "/products/industrial-equipment" },
-    { name: "Structural Systems", link: "/products/structural-systems" }
-=======
+    { name: "Structural Systems", link: "/products/structural-systems" },
     { name: "Process Equipment", link: "/products/process-equipment" },
     { name: "Fabrication", link: "/products/fabrication" },
     { name: "Infrastructure", link: "/products/infrastructure" }
->>>>>>> 1f2e97152050e7589b05386aaebed61d5c66c0b2
   ]
 
   return (
