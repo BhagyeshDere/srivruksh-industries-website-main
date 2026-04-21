@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
+<<<<<<< HEAD
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 
@@ -25,6 +26,12 @@ export const services = [
   }
 ]
 
+=======
+import { services } from "@/data/services"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
+
+>>>>>>> 1f2e97152050e7589b05386aaebed61d5c66c0b2
 export default function Services() {
   const containerRef = useRef(null)
 
@@ -124,6 +131,10 @@ function ServiceCard({ service, index, total }: { service: any, index: number, t
 
         {/* CARD */}
         <div className="relative h-[300px] sm:h-[380px] md:h-[500px] lg:h-[550px] w-full px-3 sm:px-4 md:px-8 lg:px-12">
+<<<<<<< HEAD
+=======
+          {/* Switched background from #0B2E5B to slate-900 for a lighter dark feel */}
+>>>>>>> 1f2e97152050e7589b05386aaebed61d5c66c0b2
           <div className="relative w-full h-full overflow-hidden rounded-[1.8rem] sm:rounded-[2.5rem] md:rounded-[3rem] lg:rounded-[4rem] shadow-2xl bg-slate-900 border border-white/5">
 
             <Image
@@ -134,7 +145,11 @@ function ServiceCard({ service, index, total }: { service: any, index: number, t
               className="object-cover opacity-75 group-hover:scale-105 transition duration-[2s] ease-out"
             />
 
+<<<<<<< HEAD
             {/* GRADIENT Overlay */}
+=======
+            {/* GRADIENT - Reduced opacity and updated color to match slate-900 */}
+>>>>>>> 1f2e97152050e7589b05386aaebed61d5c66c0b2
             <div className={`absolute inset-0 ${
               isLeft
                 ? "bg-gradient-to-r from-slate-950/90 via-slate-900/40 to-transparent"
